@@ -1,0 +1,277 @@
+/*
+  Global stylesheet for RupeeCalc application
+  ---------------------------------------------------
+  - CSS variables for Indian rupee color palette
+  - Reset/normalize block & base typography
+  - Header & footer styling
+  - Responsive grid layout for navigation cards
+  - Card component styles (hover, icon, title, link)
+  - Shared form styling (inputs, labels, selects, buttons, result area)
+  - Media queries for 768px & 480px breakpoints
+*/
+
+/* ---------------------------------------------------
+   1. CSS Variables (Color Palette)
+   --------------------------------------------------- */
+:root {
+  --primary: #0F9D58;      /* Indian rupee green */
+  --secondary: #FFB300;    /* Amber */
+  --background: #F5F5F5;   /* Light gray */
+  --text: #212121;         /* Dark gray */
+  --white: #ffffff;
+  --border-radius: 8px;
+  --transition-speed: 0.3s;
+}
+
+/* ---------------------------------------------------
+   2. Reset / Normalize
+   --------------------------------------------------- */
+/* Simple modern reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------------------------------------------------
+   3. Layout – Header & Footer
+   --------------------------------------------------- */
+header, footer {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo,
+footer .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+header nav a,
+footer nav a {
+  margin-left: 1.5rem;
+  font-weight: 500;
+  transition: color var(--transition-speed);
+}
+
+header nav a:hover,
+footer nav a:hover {
+  color: var(--secondary);
+}
+
+/* ---------------------------------------------------
+   4. Home Page – Navigation Cards Grid
+   --------------------------------------------------- */
+/* Container used on the home page to hold navigation cards */
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+/* ---------------------------------------------------
+   5. Card Component
+   --------------------------------------------------- */
+.card {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card .icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1rem;
+  background-color: var(--secondary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.card .title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.card a {
+  margin-top: auto; /* push link to bottom */
+  font-weight: 500;
+  color: var(--primary);
+  transition: color var(--transition-speed);
+}
+
+.card a:hover {
+  color: var(--secondary);
+}
+
+/* ---------------------------------------------------
+   6. Shared Form Styling (Calculator Pages)
+   --------------------------------------------------- */
+.form-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: border-color var(--transition-speed);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--primary);
+}
+
+button.submit-btn {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition-speed), transform var(--transition-speed);
+  border: none;
+  width: 100%;
+}
+
+button.submit-btn:hover {
+  background-color: var(--secondary);
+  transform: translateY(-2px);
+}
+
+.result-display {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #e8f5e9; /* light green */
+  border-left: 4px solid var(--primary);
+  border-radius: var(--border-radius);
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+/* ---------------------------------------------------
+   7. Media Queries – Responsive Adjustments
+   --------------------------------------------------- */
+@media (max-width: 768px) {
+  header, footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .nav-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+  }
+
+  .form-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header, footer {
+    padding: 0.75rem 1rem;
+  }
+
+  .nav-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .card .icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+  }
+
+  .form-container {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+
+  button.submit-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}

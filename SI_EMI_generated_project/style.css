@@ -1,0 +1,190 @@
+/* ------------------------------------------------------------
+   Simple Interest & EMI Calculator – Global Styles
+   ------------------------------------------------------------ */
+
+/* ---- CSS Custom Properties ------------------------------------------------ */
+:root {
+  /* Primary palette */
+  --color-primary: #0066ff;           /* vivid blue */
+  --color-primary-dark: #004cbb;      /* darker for hover/focus */
+  --color-error: #d93025;            /* red for errors */
+  --color-background: #f9fafb;       /* very light gray */
+  --color-surface: #ffffff;          /* card background */
+  --color-text: #212529;             /* dark gray for body text */
+
+  /* Spacing scale */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+
+  /* Font‑size scale */
+  --fs-base: 1rem;            /* 16px */
+  --fs-sm: 0.875rem;          /* 14px */
+  --fs-lg: 1.125rem;          /* 18px */
+  --fs-xl: 1.5rem;            /* 24px */
+}
+
+/* ---- Global Reset & Base Typography -------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%; /* 16px default */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  padding: var(--space-lg);
+}
+
+/* ---- Layout – Calculator Container --------------------------------------- */
+.calculator-container {
+  display: grid;
+  gap: var(--space-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .calculator-container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+  }
+}
+
+/* ---- Card‑like Section Styling ------------------------------------------- */
+section {
+  background: var(--color-surface);
+  border-radius: var(--space-sm);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: var(--space-lg);
+}
+
+section h2 {
+  font-size: var(--fs-xl);
+  margin-bottom: var(--space-md);
+  color: var(--color-primary);
+}
+
+/* ---- Form Group ---------------------------------------------------------- */
+.form-group {
+  margin-bottom: var(--space-md);
+}
+
+label {
+  display: block;
+  margin-bottom: var(--space-xs);
+  font-weight: 600;
+  font-size: var(--fs-base);
+}
+
+input {
+  width: 100%;
+  padding: var(--space-sm);
+  font-size: var(--fs-base);
+  border: 1px solid #ced4da;
+  border-radius: var(--space-xs);
+  background-color: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.2);
+}
+
+/* Error state for inputs */
+input.error {
+  border-color: var(--color-error) !important;
+}
+
+/* ---- Result & Error Messages -------------------------------------------- */
+.result {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  margin-top: var(--space-sm);
+  color: var(--color-primary);
+}
+
+.error-message {
+  color: var(--color-error);
+  font-size: var(--fs-sm);
+  margin-top: var(--space-xs);
+}
+
+/* ---- Buttons ------------------------------------------------------------- */
+/* Reset default button styles */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Primary action buttons */
+button {
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--space-xs);
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--fs-base);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  margin-top: var(--space-sm);
+}
+
+button:hover,
+button:focus {
+  background-color: var(--color-primary-dark);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+/* ---- Responsive Adjustments --------------------------------------------- */
+@media (max-width: 480px) {
+  body {
+    padding: var(--space-md);
+  }
+
+  .calculator-container {
+    gap: var(--space-lg);
+  }
+
+  section {
+    padding: var(--space-md);
+  }
+}
+
+/* ---- High‑Contrast Mode --------------------------------------------------- */
+@media (prefers-contrast: more) {
+  :root {
+    --color-primary: #0000ff;
+    --color-primary-dark: #0000aa;
+    --color-error: #ff0000;
+    --color-background: #ffffff;
+    --color-surface: #ffffff;
+    --color-text: #000000;
+  }
+
+  input:focus {
+    box-shadow: 0 0 0 3px var(--color-primary);
+  }
+
+  button:hover,
+  button:focus {
+    background-color: var(--color-primary-dark);
+  }
+}
