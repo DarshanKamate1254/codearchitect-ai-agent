@@ -1,106 +1,253 @@
-# 🤖 LOVELY CODER – Agentic AI Software Engineer
+# 🧠 CodeArchitect AI
 
-**LOVELY CODER** is an end-to-end **Agentic AI system** that behaves like an automated software engineer. Inspired by tools such as Devin AI and Lovable, it converts a simple natural-language prompt into a **fully functional, multi-file software project**.
+### Autonomous Project Builder & Software Engineer
 
-You describe *what* you want to build — Coder Buddy figures out *how* to build it.
+> Transform natural-language ideas into complete, production-ready software projects using Agentic AI.
 
-## ✨ What Coder Does
+![Python](https://img.shields.io/badge/Python-3.11+-blue)
+![LangGraph](https://img.shields.io/badge/LangGraph-Agentic_AI-purple)
+![LangChain](https://img.shields.io/badge/LangChain-Framework-green)
+![Pydantic](https://img.shields.io/badge/Pydantic-Validation-red)
 
-Given a prompt like:
+---
+
+## 🚀 Overview
+
+**CodeArchitect AI** is an autonomous AI software engineer that converts simple natural-language prompts into fully functional software projects.
+
+Inspired by modern AI engineering systems such as Devin and Lovable, CodeArchitect AI doesn't just generate code snippets—it plans, designs, structures, and builds complete applications through a multi-agent workflow.
+
+Simply describe what you want to build, and CodeArchitect AI handles the rest.
 
 ```bash
 python main.py "Create a responsive calculator web application"
 ```
 
-Coder will:
+---
 
-1. Plan the application features and tech stack  
-2. Design the project architecture and file structure  
-3. Generate clean, working source code (HTML, CSS, JS, etc.)  
-4. Iteratively refine the code until the project is complete  
+## ✨ What CodeArchitect AI Does
 
-All generated files are written automatically to your local filesystem.
+Given a prompt, the system automatically:
+
+* Understands project requirements
+* Creates a development plan
+* Selects the appropriate technology stack
+* Designs the project architecture
+* Generates source code
+* Creates project files and folders
+* Refines implementation iteratively
+* Produces a runnable application
 
 ---
 
-## 🚀 Key Features
+## 🏗 Agent Architecture
 
-- **Agentic Planning**  
-  Converts vague prompts into structured engineering plans and Jira-style feature stories.
+CodeArchitect AI is powered by a multi-agent workflow built with LangGraph.
 
-- **Architectural Reasoning**  
-  Acts like a senior software architect by defining detailed implementation steps for every file.
-
-- **Iterative Code Generation**  
-  Uses a ReAct-style agent loop to read, write, and refine code until completion.
-
-- **Tool-Enabled AI**  
-  The agent can interact with the filesystem using controlled read/write tools.
-
-- **Visual Agent Debugging**  
-  Supports tracing LangGraph execution and agent state using an Agentic Debugger.
-
-- **Schema-Driven Outputs**  
-  Pydantic models enforce structured, production-grade outputs.
+```text
+User Prompt
+     │
+     ▼
+┌─────────────────┐
+│ Planner Agent   │
+└─────────────────┘
+     │
+     ▼
+┌─────────────────┐
+│ Architect Agent │
+└─────────────────┘
+     │
+     ▼
+┌─────────────────┐
+│ Coder Agent     │
+└─────────────────┘
+     │
+     ▼
+Generated Project
+```
 
 ---
 
-## 🧠 Agent Architecture
-
-Coder Buddy is implemented using **LangGraph** with three core agent nodes:
+## 🧠 Core Agents
 
 ### 1️⃣ Planner Agent
-- Interprets the user prompt
-- Defines:
-  - Features
-  - Tech stack
-  - File structure
-- Outputs a high-level engineering plan
+
+Responsible for understanding the user's intent and transforming it into a structured engineering plan.
+
+**Responsibilities**
+
+* Requirement Analysis
+* Feature Identification
+* Technology Selection
+* Project Scoping
+* File Structure Planning
+
+---
 
 ### 2️⃣ Architect Agent
-- Converts plans into detailed, file-level implementation instructions
-- Acts like a senior engineer guiding development
+
+Acts as a senior software architect by converting plans into implementation-ready specifications.
+
+**Responsibilities**
+
+* System Design
+* Component Architecture
+* Module Breakdown
+* File-Level Instructions
+* Development Strategy
+
+---
 
 ### 3️⃣ Coder Agent
-- Implements instructions
-- Iteratively writes and refines code
-- Continues until project status is marked `done`
 
-<div style="text-align: center;">
-    <img src="resources/coder_buddy_diagram.png" alt="Coder Agent Architecture" width="90%"/>
-</div>
+Implements and refines the project autonomously.
 
----
+**Responsibilities**
 
-## 🛠️ Tech Stack
-
-| Category | Technology |
-|--------|------------|
-| Agent Framework | LangChain, LangGraph |
-| LLM Inference | Open-source GPT models via Groq Cloud |
-| Language | Python |
-| Package Manager | UV |
-| Debugging | AI Agentic Debugger |
-| Validation | Pydantic |
+* Code Generation
+* File Creation
+* Refactoring
+* Error Correction
+* Iterative Improvements
 
 ---
 
-## ▶️ Usage
+## ⚡ Key Features
+
+### 🤖 Agentic Planning
+
+Transforms vague user ideas into structured engineering workflows.
+
+### 🏗 Architectural Reasoning
+
+Designs scalable project structures before writing code.
+
+### 🔄 Iterative Development
+
+Continuously improves generated code until project completion.
+
+### 📂 Automatic File Generation
+
+Creates complete project directories and source files automatically.
+
+### 🛠 Tool-Enabled Execution
+
+Interacts with the local filesystem using controlled tools.
+
+### 🔍 Visual Agent Debugging
+
+Trace and inspect agent execution through LangGraph debugging workflows.
+
+### 📊 Structured Outputs
+
+Uses Pydantic schemas to ensure predictable and reliable outputs.
+
+---
+
+## 🛠 Technology Stack
+
+| Category             | Technology       |
+| -------------------- | ---------------- |
+| Agent Framework      | LangGraph        |
+| LLM Framework        | LangChain        |
+| LLM Provider         | Groq Cloud       |
+| Programming Language | Python           |
+| Validation           | Pydantic         |
+| Package Manager      | UV               |
+| Debugging            | Agentic Debugger |
+
+---
+
+## 🚀 Installation
+
+### Clone Repository
 
 ```bash
-python main.py "build a SIMPLE and COMPOUND INTEREST calculator web app with local storage"
+git clone https://github.com/your-username/codearchitect-ai.git
+cd codearchitect-ai
 ```
-## ▶️ Example Outputs:
 
-![Architecture](app1.jpg)
-![Architecture](app2.jpg)
+### Install Dependencies
+
+```bash
+uv sync
+```
+
+### Configure Environment Variables
+
+Create a `.env` file:
+
+```env
+GROQ_API_KEY=your_api_key
+```
+
 ---
-## ⚠️ Disclaimer
-This project is for educational and experimental use only.
-## 👨‍💻 Developer Info
-**Name:** Manjunath C Bagewadi  
-**Email:** manjunathsept11@gmail.com  
-**Phone:** +91 97428 96702  
-**Porfolio:** www.manjunathbagewadi.in  
-**LinkedIn:** [linkedin.com/in/manjunath-bagewadi-9325ab55](https://www.linkedin.com/in/manjunath-bagewadi-9325ab55)
 
+## ▶ Usage
+
+### Example 1
+
+```bash
+python main.py "Create a responsive calculator web application"
+```
+
+### Example 2
+
+```bash
+python main.py "Build a SIMPLE and COMPOUND INTEREST calculator with local storage"
+```
+
+### Example 3
+
+```bash
+python main.py "Create an AI-powered expense tracker with charts and analytics"
+```
+
+---
+
+## 📸 Example Outputs
+
+### Generated Application
+
+![Application Screenshot](app1.jpg)
+
+### Generated Project Structure
+
+![Project Structure](app2.jpg)
+
+---
+
+## 🔮 Roadmap
+
+* Multi-Agent Collaboration
+* Automated Testing Agent
+* Deployment Agent
+* Docker Support
+* CI/CD Pipeline Generation
+* Full-Stack Application Generation
+* Mobile App Development Support
+* Autonomous Bug Fixing
+
+---
+
+## ⚠ Disclaimer
+
+This project is intended for educational and research purposes.
+
+Generated code should be reviewed, tested, and validated before production deployment.
+
+---
+
+## 👨‍💻 Developer
+
+**Darshan Kamate**
+
+📧 Email: [kamatedarshan5@gmail.com](mailto:kamatedarshan5@gmail.com)
+
+📱 Phone: +91 9353675710
+
+LinkedIn: https://www.linkedin.com/in/darshankamate
+
+---
+
+### ⭐ If you find this project useful, consider giving it a star.
