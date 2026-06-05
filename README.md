@@ -42,7 +42,7 @@ Given a prompt, the system automatically:
 
 ## Agent Architecture
 
-![Architecture](codearchitect.png)
+![Architecture](Codearchitect.png)
 
 CodeArchitect AI is powered by a multi-agent workflow built with LangGraph.
 
