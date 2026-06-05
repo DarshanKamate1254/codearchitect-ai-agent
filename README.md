@@ -1,4 +1,4 @@
-# 🧠 CodeArchitect AI
+# CodeArchitect AI
 
 ### Autonomous Project Builder & Software Engineer
 
@@ -11,7 +11,7 @@
 
 ---
 
-## 🚀 Overview
+## Overview
 
 **CodeArchitect AI** is an autonomous AI software engineer that converts simple natural-language prompts into fully functional software projects.
 
@@ -25,7 +25,7 @@ python main.py "Create a responsive calculator web application"
 
 ---
 
-## ✨ What CodeArchitect AI Does
+## What CodeArchitect AI Does
 
 Given a prompt, the system automatically:
 
@@ -40,7 +40,7 @@ Given a prompt, the system automatically:
 
 ---
 
-## 🏗 Agent Architecture
+## Agent Architecture
 
 CodeArchitect AI is powered by a multi-agent workflow built with LangGraph.
 
@@ -68,9 +68,9 @@ Generated Project
 
 ---
 
-## 🧠 Core Agents
+## Core Agents
 
-### 1️⃣ Planner Agent
+### Planner Agent
 
 Responsible for understanding the user's intent and transforming it into a structured engineering plan.
 
@@ -84,7 +84,7 @@ Responsible for understanding the user's intent and transforming it into a struc
 
 ---
 
-### 2️⃣ Architect Agent
+### Architect Agent
 
 Acts as a senior software architect by converting plans into implementation-ready specifications.
 
@@ -98,7 +98,7 @@ Acts as a senior software architect by converting plans into implementation-read
 
 ---
 
-### 3️⃣ Coder Agent
+### Coder Agent
 
 Implements and refines the project autonomously.
 
@@ -112,39 +112,39 @@ Implements and refines the project autonomously.
 
 ---
 
-## ⚡ Key Features
+## Key Features
 
-### 🤖 Agentic Planning
+### Agentic Planning
 
 Transforms vague user ideas into structured engineering workflows.
 
-### 🏗 Architectural Reasoning
+### Architectural Reasoning
 
 Designs scalable project structures before writing code.
 
-### 🔄 Iterative Development
+### Iterative Development
 
 Continuously improves generated code until project completion.
 
-### 📂 Automatic File Generation
+### Automatic File Generation
 
 Creates complete project directories and source files automatically.
 
-### 🛠 Tool-Enabled Execution
+### Tool-Enabled Execution
 
 Interacts with the local filesystem using controlled tools.
 
-### 🔍 Visual Agent Debugging
+### Visual Agent Debugging
 
 Trace and inspect agent execution through LangGraph debugging workflows.
 
-### 📊 Structured Outputs
+### Structured Outputs
 
 Uses Pydantic schemas to ensure predictable and reliable outputs.
 
 ---
 
-## 🛠 Technology Stack
+## Technology Stack
 
 | Category             | Technology       |
 | -------------------- | ---------------- |
@@ -158,7 +158,7 @@ Uses Pydantic schemas to ensure predictable and reliable outputs.
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ### Clone Repository
 
@@ -183,7 +183,7 @@ GROQ_API_KEY=your_api_key
 
 ---
 
-## ▶ Usage
+## Usage
 
 ### Example 1
 
@@ -205,7 +205,7 @@ python main.py "Create an AI-powered expense tracker with charts and analytics"
 
 ---
 
-## 📸 Example Outputs
+## Example Outputs
 
 ### Generated Application
 
@@ -217,7 +217,7 @@ python main.py "Create an AI-powered expense tracker with charts and analytics"
 
 ---
 
-## 🔮 Roadmap
+## Roadmap
 
 * Multi-Agent Collaboration
 * Automated Testing Agent
@@ -230,7 +230,7 @@ python main.py "Create an AI-powered expense tracker with charts and analytics"
 
 ---
 
-## ⚠ Disclaimer
+## Disclaimer
 
 This project is intended for educational and research purposes.
 
@@ -238,16 +238,16 @@ Generated code should be reviewed, tested, and validated before production deplo
 
 ---
 
-## 👨‍💻 Developer
+## Developer
 
 **Darshan Kamate**
 
-📧 Email: [kamatedarshan5@gmail.com](mailto:kamatedarshan5@gmail.com)
+Email: [kamatedarshan5@gmail.com](mailto:kamatedarshan5@gmail.com)
 
-📱 Phone: +91 9353675710
+Phone: +91 9353675710
 
 LinkedIn: https://www.linkedin.com/in/darshankamate
 
 ---
 
-### ⭐ If you find this project useful, consider giving it a star.
+### If you find this project useful, consider giving it a star.
